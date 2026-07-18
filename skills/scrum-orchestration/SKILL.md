@@ -23,7 +23,7 @@ Every phase works to a named standard, and every artifact carries `ISO:` trace t
 | Phase | Standard |
 |---|---|
 | Planning & requirements → backlog | ISO/IEC 29110 (PM.1, SI.2) |
-| Architecture & design | ISO/IEC 25010 + ISO/IEC 27034 |
+| Architecture & design | ISO/IEC 25010 + ISO/IEC 27034 · Frontend: org design standard ([references/design/INDEX.md](references/design/INDEX.md) — Style_Apple + Brand_Guideline, **read before any UI work, binding**) |
 | TDD & testing (static + unit/integration/system/E2E) | ISO/IEC/IEEE 29119 |
 | Security review | ISO/IEC 27034 + OWASP Top 10:2025 / API Top 10 / SAMM |
 | AI features | ISO/IEC 23894 (risk note per AI feature) |

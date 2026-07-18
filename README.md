@@ -65,6 +65,7 @@ Testing covers **static** (ruff/mypy/bandit · eslint/tsc · **SonarQube**) and 
 |---|---|
 | Planning & requirements | ISO/IEC 29110 (VSE — PM.1, SI.2) |
 | Architecture & design | ISO/IEC 25010 + ISO/IEC 27034 |
+| Frontend design | org design standard (agent-skill): `references/design/` — Style_Apple + Brand_Guideline, **read before any UI work (binding)** |
 | TDD & testing | ISO/IEC/IEEE 29119 |
 | Security review | ISO/IEC 27034 + OWASP Top 10:2025 / API Top 10 / SAMM |
 | AI features | ISO/IEC 23894 |

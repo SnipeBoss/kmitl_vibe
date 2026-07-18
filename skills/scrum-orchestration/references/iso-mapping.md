@@ -29,6 +29,8 @@ Each design decision names the 25010 quality characteristic it serves: functiona
 - [ ] DB schema delta documented (PK, FKs + ON DELETE, indexes) before migrations
 - [ ] Trust boundaries + auth model stated for new surface
 - [ ] Each decision maps to a 25010 characteristic
+- [ ] **Frontend design standard read before UI work** (`design/Style_Apple.md` + `design/Brand_Guideline.md` — binding, every session) and only guideline tokens used
+- [ ] UI gate items hold: brand colors/typography/spacing · keyboard reachable + visible focus · 375px layout holds · loading/empty/error states · no inline styles
 
 ### 3. TDD & Testing — ISO/IEC/IEEE 29119
 
