@@ -38,7 +38,9 @@ Tag: `ISO:29119`.
 
 Both kinds, all four dynamic levels, every sprint:
 - **Static testing**: ruff + mypy + bandit (api) · eslint + tsc (web) · **SonarQube** scan + Quality Gate when configured (see `sonarqube.md`; ratings also evidence ISO 25010 maintainability/reliability/security) · artifact reviews against gates
-- **Dynamic testing**: **Unit** (~70%) → **Integration** (~20%) → **System** (assembled stack via docker compose) → **E2E/UAT** (~10%, Playwright on critical paths)
+- **Dynamic testing** — mandated tools: **Functional = pytest · JUnit · TestNG** / **E2E = Playwright** / **Performance = JMeter · k6 · Locust · Gatling**:
+  - **Unit** (~70%) → **Integration** (~20%) → **System** (assembled stack via docker compose) → **E2E/UAT** (~10%, Playwright on critical paths)
+  - **Performance** (load / stress / spike, k6 by default): P95 < 2s on critical paths (ISO 25010 performance efficiency) — before every release, and at sprint close when the sprint touched a critical path
 
 **Gate 3 checklist** (per story, enforced by task deps + DoD hook):
 - [ ] Tests written and observed FAILING before implementation started
@@ -47,6 +49,7 @@ Both kinds, all four dynamic levels, every sprint:
 - [ ] SonarQube Quality Gate PASSED at sprint close (when configured)
 - [ ] Coverage on new code: BE ≥ 80%, FE ≥ 70%
 - [ ] Critical paths covered at system or E2E level at least once per release
+- [ ] Performance run (k6/Locust/JMeter/Gatling) green with P95 < 2s on critical paths — per release, and per sprint when a critical path changed
 
 ### 4. Security — ISO/IEC 27034 + OWASP
 

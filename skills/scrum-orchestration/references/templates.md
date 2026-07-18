@@ -69,8 +69,9 @@ Stories: E1-S1, E1-S2 · Branch prefix: feature/sprint-NN-
 | E1-S1-impl | api-dev | api | E1-S1-test | in-progress |
 | E1-S1-review | security | — | E1-S1-impl | pending |
 ## Test level plan (ISO:29119)
-| Story | Unit | Integration | System | E2E |
-|---|---|---|---|---|
+<!-- Functional: pytest/JUnit/TestNG · E2E: Playwright · Performance: k6/Locust/JMeter/Gatling -->
+| Story | Unit | Integration | System | E2E | Performance |
+|---|---|---|---|---|---|
 ```
 
 ## sprints/sprint-NN/REPORT.md
@@ -88,6 +89,7 @@ SonarQube: Quality Gate PASSED/FAILED · new-code coverage xx% · bugs n · vuln
 | Level | Suites | Passed | Coverage (new code) |
 |---|---|---|---|
 | Unit / Integration / System / E2E | | | BE xx% / FE xx% |
+Performance (k6/Locust): P95 xx ms (target < 2s) · throughput xx req/s · error rate xx%   <!-- or "no critical path touched" -->
 ## Security (ISO:27034 / OWASP)
 MUST: 0 · SHOULD: n (list) — see SECURITY_REVIEW.md
 ## Carry-over & impediments

@@ -55,7 +55,7 @@ TaskCompleted hook re-runs static + dynamic tests on every completion (DoD gate)
 lead runs full suite ──► REPORT.md ──► tells YOU what you can now do ──► you decide next sprint
 ```
 
-Testing covers **static** (ruff/mypy/bandit · eslint/tsc · **SonarQube**) and **dynamic** at all four levels: **Unit → Integration → System → E2E** (ISO/IEC/IEEE 29119).
+Testing covers **static** (ruff/mypy/bandit · eslint/tsc · **SonarQube**) and **dynamic** at all levels (ISO/IEC/IEEE 29119): **Unit → Integration → System → E2E → Performance**, with a fixed tool mandate — Functional: **pytest · JUnit · TestNG** · E2E: **Playwright** · Performance: **JMeter · k6 · Locust · Gatling** (P95 < 2s on critical paths).
 
 **SonarQube** is optional but binding once configured: add a `sonar-project.properties` (+ `SONAR_HOST_URL`/`SONAR_TOKEN`, or the bundled docker-compose service) and the SonarQube **Quality Gate must PASS before a sprint can close**; the security reviewer also clears new Security Hotspots per story. Setup guide: `skills/scrum-orchestration/references/sonarqube.md`.
 
