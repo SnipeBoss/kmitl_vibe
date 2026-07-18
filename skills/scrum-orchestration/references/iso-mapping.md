@@ -37,13 +37,14 @@ Tag: `ISO:29119`.
 29119-2 test processes (design before execution — hence TDD fits natively), 29119-3 documentation (our test file headers + sprint report table), 29119-4 design techniques (AC-driven, boundary values, error guessing on validation).
 
 Both kinds, all four dynamic levels, every sprint:
-- **Static testing**: ruff + mypy + bandit (api) · eslint + tsc (web) · artifact reviews against gates
+- **Static testing**: ruff + mypy + bandit (api) · eslint + tsc (web) · **SonarQube** scan + Quality Gate when configured (see `sonarqube.md`; ratings also evidence ISO 25010 maintainability/reliability/security) · artifact reviews against gates
 - **Dynamic testing**: **Unit** (~70%) → **Integration** (~20%) → **System** (assembled stack via docker compose) → **E2E/UAT** (~10%, Playwright on critical paths)
 
 **Gate 3 checklist** (per story, enforced by task deps + DoD hook):
 - [ ] Tests written and observed FAILING before implementation started
 - [ ] Every AC has ≥1 dynamic test at the appropriate level; traceability header in each test file
 - [ ] Static checks clean; full dynamic suite green
+- [ ] SonarQube Quality Gate PASSED at sprint close (when configured)
 - [ ] Coverage on new code: BE ≥ 80%, FE ≥ 70%
 - [ ] Critical paths covered at system or E2E level at least once per release
 

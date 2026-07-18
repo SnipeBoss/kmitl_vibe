@@ -84,6 +84,7 @@ Stories: E1-S1, E1-S2 · Branch prefix: feature/sprint-NN-
 | Story | AC status | Notes |
 ## Quality evidence (ISO:29119)
 Static: ruff/mypy/bandit ✅ · eslint/tsc ✅
+SonarQube: Quality Gate PASSED/FAILED · new-code coverage xx% · bugs n · vulnerabilities n · hotspots reviewed 100%   <!-- or "not configured" -->
 | Level | Suites | Passed | Coverage (new code) |
 |---|---|---|---|
 | Unit / Integration / System / E2E | | | BE xx% / FE xx% |

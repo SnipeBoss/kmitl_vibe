@@ -36,6 +36,15 @@ if [ -d "$ROOT/api" ] && [ -f "$ROOT/api/pyproject.toml" ]; then
   fi
 fi
 
+# ---- SonarQube (opt-in per task — full scan normally runs at sprint close) ----
+if [ "${KMITL_VIBE_SONAR_ON_TASK:-0}" = "1" ] && [ -f "$ROOT/sonar-project.properties" ]; then
+  if command -v sonar-scanner >/dev/null 2>&1; then
+    run "static: sonarqube quality gate" "$ROOT" sonar-scanner -Dsonar.qualitygate.wait=true
+  else
+    echo "kmitl_vibe gate: sonar-scanner not found — skipped SonarQube (see skill references/sonarqube.md)." >&2
+  fi
+fi
+
 # ---- Frontend (React/TS) ----
 if [ -f "$ROOT/web/package.json" ]; then
   if [ -d "$ROOT/web/node_modules" ]; then

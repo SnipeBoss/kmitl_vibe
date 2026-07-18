@@ -71,8 +71,8 @@ Templates for all of these: [references/templates.md](references/templates.md) �
 
 - **DoR** before a task enters a sprint: description + ≥1 AC + 1–3 day size + estimate + no blockers + layer tag.
 - **DoD** before a task closes: all AC met · static tests clean (ruff/mypy/bandit · eslint/tsc) · all dynamic tests green (unit / integration / system / E2E as scoped) · coverage BE ≥ 80% / FE ≥ 70% on new code · no debug code or secrets · docker compose stack still builds.
-- **Story close**: security review has 0 MUST findings.
-- **Sprint close**: full suite green run by the lead + report written + user informed.
+- **Story close**: security review has 0 MUST findings (including SonarQube Security Hotspots on the story's files, when configured).
+- **Sprint close**: full suite green run by the lead · **SonarQube Quality Gate PASSED** when the project is configured for it (setup + commands: [references/sonarqube.md](references/sonarqube.md)) · report written · user informed.
 
 ## Reporting to the Vibe Coder
 
