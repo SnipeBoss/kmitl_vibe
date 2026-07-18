@@ -4,6 +4,9 @@
     "name": "GS Battery AI Engineering",
     "email": "Burased.B@gsbattery.co.th"
   },
+  "metadata": {
+    "description": "KMITL vibe marketplace — ISO-referenced Scrum plugin for Vibe Coders (TDD sprints with agent teammates, FastAPI + React/TypeScript)."
+  },
   "plugins": [
     {
       "name": "kmitl_vibe",
