@@ -15,12 +15,14 @@ Stack: **FastAPI** (backend) + **React / TypeScript** (frontend) + PostgreSQL, c
 
 ## Install
 
-**From GitHub via npx (recommended — shows the KMITL banner, enables teammate mode, installs the plugin):**
+**From GitHub (recommended — shows the KMITL banner, enables teammate mode, installs the plugin). Idempotent: safe to re-run any time, an existing install is updated.**
 
 ```bash
-npx kmitl_vibe install          # published package
-# or straight from GitHub:
-npx github:SnipeBoss/kmitl_vibe install
+# option A — npx (always pass -y, see troubleshooting below)
+npx -y github:SnipeBoss/kmitl_vibe install
+
+# option B — no npm needed (best for cloud workspaces, e.g. Coder)
+curl -fsSL https://raw.githubusercontent.com/SnipeBoss/kmitl_vibe/main/install.sh | bash
 ```
 
 **Manually inside Claude Code:**
@@ -31,6 +33,13 @@ npx github:SnipeBoss/kmitl_vibe install
 ```
 
 Teammate mode (agent teams) is required for sprints — the installer sets `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` in `~/.claude/settings.json` (skip with `--no-teams`).
+
+### Troubleshooting install
+
+- **`npx` exits silently, no banner, nothing installed** (common in cloud/web terminals like Coder): npm's interactive `Ok to proceed?` prompt can swallow your `y` and npm then quits without output. Fix: pass `-y` (`npx -y github:SnipeBoss/kmitl_vibe install`) or use the `curl | bash` installer, which never prompts.
+- **`npm error spawn git`**: git isn't installed — `sudo apt-get install -y git` (or use the `curl | bash` installer).
+- **`claude CLI not found`**: install Claude Code first (`npm i -g @anthropic-ai/claude-code`), then re-run.
+- Still stuck? Run `npx -y --loglevel=info github:SnipeBoss/kmitl_vibe install` and read the log it prints.
 
 ## Use
 

@@ -1,6 +1,6 @@
 {
   "name": "kmitl_vibe",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ISO-referenced Scrum plugin for Claude Code — Vibe Coder requirements → Epics → Stories → TDD sprints with agent teammates (FastAPI + React/TypeScript).",
   "bin": {
     "kmitl_vibe": "bin/cli.js"
@@ -16,7 +16,8 @@
     "skills/",
     "hooks/",
     "scripts/",
-    "README.md"
+    "README.md",
+    "install.sh"
   ],
   "repository": {
     "type": "git",
