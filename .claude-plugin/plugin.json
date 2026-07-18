@@ -1,0 +1,10 @@
+{
+  "name": "kmitl_vibe",
+  "version": "0.1.0",
+  "description": "ISO-referenced Scrum orchestration for Vibe Coders: type requirements, get Epics → User Stories → Tasks, then TDD sprints executed by an agent team (FastAPI + React/TypeScript). Standards: ISO/IEC 29110, 25010, 29119, 27034/OWASP, 23894.",
+  "author": {
+    "name": "GS Battery AI Engineering",
+    "email": "Burased.B@gsbattery.co.th"
+  },
+  "keywords": ["scrum", "tdd", "iso-29110", "agent-teams", "fastapi", "react"]
+}

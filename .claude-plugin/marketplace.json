@@ -1,0 +1,14 @@
+{
+  "name": "kmitl_vibe",
+  "owner": {
+    "name": "GS Battery AI Engineering",
+    "email": "Burased.B@gsbattery.co.th"
+  },
+  "plugins": [
+    {
+      "name": "kmitl_vibe",
+      "source": "./",
+      "description": "ISO-referenced Scrum orchestration for Vibe Coders — Epics → Stories → TDD sprints with agent teammates (FastAPI + React/TypeScript)."
+    }
+  ]
+}
